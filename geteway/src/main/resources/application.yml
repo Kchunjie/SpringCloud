@@ -1,0 +1,15 @@
+server:
+  port: 8030
+
+spring:
+  application:
+    name: geteway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  routes:
+    # 将provider 添加进来
+    provider: /p/**
